@@ -1,0 +1,11 @@
+
+.artist-starter {
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    padding: 3rem 0;
+  }
+  
+.artist{
+    margin-block: 5rem;
+}

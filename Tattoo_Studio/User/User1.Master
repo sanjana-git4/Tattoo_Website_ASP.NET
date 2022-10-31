@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User1.master.cs" Inherits="Tattoo_Studio.User.User1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+ 
+     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+
+      <link rel="stylesheet" href="category/Home1.css" />
+    <script src="category/Home1.js"></script>
+   
+    <!-- custon style Sheet & JavaScript -->
+    <title>Inkstart Website</title>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="home">
+    <header class="primary-header container flex">
+      <div class="header-inner-one flex">
+        <div class="logo">
+          <img src="./Home_image/logo2.png" alt="" />
+        </div>
+        <button
+          class="mobile-close-btn"
+          data-visible="false"
+          aria-controls="primary-navigation"
+        >
+          <i class="uil uil-times-circle"></i>
+        </button>
+        <nav>
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <li>
+              <a class="active fs-100 fs-montserrat bold-500" href="Home.aspx"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class=" fs-100 fs-montserrat bold-500" href="View_design.aspx">Designs</a>
+            </li>
+            <li>
+              <a class="fs-100 fs-montserrat bold-500" href="AboutUs.aspx"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a class="fs-100 fs-montserrat bold-500" href="Blog.aspx">Blog</a>
+            </li>
+              <li>
+              <a class="fs-100 fs-montserrat bold-500" href="Artists.aspx">Artists</a>
+            </li>
+            <li>
+              <a class="fs-100 fs-montserrat bold-500" href="Contact.aspx">
+                Contact Us</a
+              >
+            </li>
+               <li>
+              <a class="fs-100 fs-montserrat bold-500" href="Add_review.aspx">Review</a>
+            </li>
+              <li>
+              <a class="fs-100 fs-montserrat bold-500" href="Add_Appointment.aspx">Appointment</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+
+        
+      <div class="header-login flex">
+        <%
+            if (Session["username"]==null)
+            {
+                            %>
+                 <a href="../SignIn1.aspx"> <p class="fs-100 fs-montserrat bold-500">login</p></a>
+          <%
+            }
+            else{
+
+                  %>
+          <a href="../Logout.aspx"> <p class="fs-100 fs-montserrat bold-500">Logout</p></a>
+          <%
+                 
+
+            }
+
+            %>
+
+
+        
+      <a  href="Add_To_Cart.aspx"> <i
+          id="cart-box" class="uil uil-shopping-bag"></i></a></div>
+           <div class="mobile-open-btn"><i class="uil uil-align-right"></i></div>
+
+    </header>
+
+            </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+       
+        <section class="brands grid">
+</section>
+            
+        <!-- =============Footer Menu=================== -->
+        
+        <footer id="banner" class="section-p1">
+          <div class="col">
+              <div class="logo"><img src="./home_image/logo2.png" alt=""></div>
+              <h4>Contact</h4>
+              <p><strong>Address:</strong> No. 36 De Kretser Pl, Colombo 4</p>
+              <p><strong>Phone:</strong> 011 2264 751 /011 2275 415</p>
+              <p><strong>Hours:</strong> 09:00 - 18:00, Mon - Sat</p>
+              <div class="follow">
+                  <h4>Follow Us</h4>
+                  <div class="icon">
+                      <i class="fab fa-facebook-f"></i>
+                      <i class="fab fa-twitter"></i>
+                      <i class="fab fa-instagram"></i>
+                      <i class="fab fa-pinterest-p"></i>
+                  </div>
+              </div>    
+          </div>
+          <div class="col">
+              <h4>About</h4>
+              <a href="AboutUs.aspx">About Us</a>
+              <a href="Contact.aspx">Contact Us</a>
+          </div>
+          <div class="col">
+              <h4>My Account</h4>
+              <a href="/SignIn1.aspx">Sign in</a>
+              <a href="View_cart.aspx">View Cart</a>
+              <a href="Contact.aspx">Help</a>
+          </div>
+          <div class="col install">
+              <h4>Payment</h4>
+              <p>You can choose your below payment methods</p>
+              <div class="row">
+                  <img src="./home_image/Capture.jpg" alt="">
+                  <img src="./home_image/logo.jpg" alt="">
+              </div>
+              <p>Secured Payment Gateways</p>
+              <img src="./home_image/pay.png" alt="">
+          </div>
+           <div class="copyright">
+              <p>&copy; 2022. InkStar.com | All Rights Reserved</p>
+           </div>
+        </footer>
+
+    </form>
+</body>
+</html>

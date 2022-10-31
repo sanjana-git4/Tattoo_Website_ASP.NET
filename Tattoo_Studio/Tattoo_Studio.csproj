@@ -1,0 +1,624 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2383E0E3-AA2A-482A-B4C8-940136FEE5DF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tattoo_Studio</RootNamespace>
+    <AssemblyName>Tattoo_Studio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44326</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin_home.aspx" />
+    <Content Include="Admin\assets\css\bootstrap.css" />
+    <Content Include="Admin\assets\css\custom.css" />
+    <Content Include="Admin\assets\css\font-awesome.css" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Admin\assets\img\logo.png" />
+    <Content Include="Admin\assets\js\bootstrap.min.js" />
+    <Content Include="Admin\assets\js\custom.js" />
+    <Content Include="Admin\assets\js\jquery-1.10.2.js" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\Delete_user.aspx" />
+    <Content Include="Admin\images\img1.jpg" />
+    <Content Include="Admin\images\img3.jpg" />
+    <Content Include="Admin\images\img7.jpg" />
+    <Content Include="Admin\manage_staff.aspx" />
+    <Content Include="Admin\Update_user.aspx" />
+    <Content Include="Admin\View_review.aspx" />
+    <Content Include="Change_password.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="log\Capture.JPG" />
+    <Content Include="log\login bg.png" />
+    <Content Include="log\login.jpg" />
+    <Content Include="log\login2.jpg" />
+    <Content Include="log\logo2.png" />
+    <Content Include="log\style1.css" />
+    <Content Include="log\style.css" />
+    <Content Include="log\tattoo-price.jpg" />
+    <Content Include="SignIn1.aspx" />
+    <Content Include="SignUp1.aspx" />
+    <Content Include="Staff\Add_Design.aspx" />
+    <Content Include="Staff\css\style.css" />
+    <Content Include="Staff\Delete_appointment.aspx" />
+    <Content Include="Staff\Delete_review.aspx" />
+    <Content Include="Staff\images\img1.jpg" />
+    <Content Include="Staff\images\img3.jpg" />
+    <Content Include="Staff\images\img7.jpg" />
+    <Content Include="Staff\Staff_home.aspx" />
+    <Content Include="Staff\View_appointment.aspx" />
+    <Content Include="Staff\View_review.aspx" />
+    <Content Include="User\AboutUs.aspx" />
+    <Content Include="User\Add_Appointment.aspx" />
+    <Content Include="User\Add_review.aspx" />
+    <Content Include="User\Add_To_Cart.aspx" />
+    <Content Include="User\Artists.aspx" />
+    <Content Include="User\Blog.aspx" />
+    <Content Include="User\Cart.aspx" />
+    <Content Include="User\category\about.css" />
+    <Content Include="User\category\artist.css" />
+    <Content Include="User\category\blog.css" />
+    <Content Include="User\category\appointment1.css" />
+    <Content Include="User\category\Cappointment.css" />
+    <Content Include="User\category\contact2.css" />
+    <Content Include="User\category\Home1.css" />
+    <Content Include="User\category\Home1.js" />
+    <Content Include="User\category\payment.css" />
+    <Content Include="User\category\review.css" />
+    <Content Include="User\category\shop.css" />
+    <Content Include="User\category\shop.js" />
+    <Content Include="User\Contact.aspx" />
+    <Content Include="User\Delete_cart.aspx" />
+    <Content Include="User\Home.aspx" />
+    <Content Include="User\Home_image\about.jpg" />
+    <Content Include="User\Home_image\app.jpg" />
+    <Content Include="User\Home_image\artist1.jpg" />
+    <Content Include="User\Home_image\artist2.jpg" />
+    <Content Include="User\Home_image\artist3.jpg" />
+    <Content Include="User\Home_image\artist4.jpg" />
+    <Content Include="User\Home_image\artist5.jpg" />
+    <Content Include="User\Home_image\artist6.jpg" />
+    <Content Include="User\Home_image\best prdct img %288%29.jpg" />
+    <Content Include="User\Home_image\best prdct img1.jpg" />
+    <Content Include="User\Home_image\best prdct img2.jpg" />
+    <Content Include="User\Home_image\best prdct img3.jpg" />
+    <Content Include="User\Home_image\best prdct img4.jpg" />
+    <Content Include="User\Home_image\best prdct img5.jpg" />
+    <Content Include="User\Home_image\best prdct img6.jpg" />
+    <Content Include="User\Home_image\best prdct img7.jpg" />
+    <Content Include="User\Home_image\blog %281%29.jpg" />
+    <Content Include="User\Home_image\blog %282%29.jpg" />
+    <Content Include="User\Home_image\blog %283%29.jpg" />
+    <Content Include="User\Home_image\blog %284%29.jpg" />
+    <Content Include="User\Home_image\blog %285%29.jpg" />
+    <Content Include="User\Home_image\blog %286%29.jpg" />
+    <Content Include="User\Home_image\Capture.JPG" />
+    <Content Include="User\Home_image\credit-card.svg" />
+    <Content Include="User\Home_image\ctg img %282%29.jpg" />
+    <Content Include="User\Home_image\ctg img %284%29.jpg" />
+    <Content Include="User\Home_image\ctg img %286%29.jpg" />
+    <Content Include="User\Home_image\ctg img1 .jpg" />
+    <Content Include="User\Home_image\ctg img3.jpg" />
+    <Content Include="User\Home_image\ctg img5.jpg" />
+    <Content Include="User\Home_image\CU-14.jpg" />
+    <Content Include="User\Home_image\CU-19.jpg" />
+    <Content Include="User\Home_image\feature green.jpg" />
+    <Content Include="User\Home_image\feature img.jpg" />
+    <Content Include="User\Home_image\logo2.png" />
+    <Content Include="User\Home_image\pay.png" />
+    <Content Include="User\Home_image\PE-10.jpg" />
+    <Content Include="User\Home_image\phone-volume.svg" />
+    <Content Include="User\Home_image\play.jpg" />
+    <Content Include="User\Home_image\pngegg1.png" />
+    <Content Include="User\Home_image\PO-8.jpg" />
+    <Content Include="User\Home_image\smile.svg" />
+    <Content Include="User\Home_image\stopwatch.svg" />
+    <Content Include="User\Home_image\trend3.jpg" />
+    <Content Include="User\Home_image\trends1.jpg" />
+    <Content Include="User\Home_image\trends2.jpg" />
+    <Content Include="User\image\199.jpg" />
+    <Content Include="User\image\200.jpg" />
+    <Content Include="User\image\201.jpg" />
+    <Content Include="User\image\202.jpg" />
+    <Content Include="User\image\205.jpg" />
+    <Content Include="User\image\206.jpg" />
+    <Content Include="User\image\208.jpg" />
+    <Content Include="User\image\209.jpg" />
+    <Content Include="User\image\210.jpg" />
+    <Content Include="User\image\211.jpg" />
+    <Content Include="User\image\212.jpeg" />
+    <Content Include="User\image\214.jpeg" />
+    <Content Include="User\image\216.jpeg" />
+    <Content Include="User\image\219.jpeg" />
+    <Content Include="User\image\220.jpeg" />
+    <Content Include="User\image\about-us.png" />
+    <Content Include="User\image\app.jpg" />
+    <Content Include="User\image\art-1.png" />
+    <Content Include="User\image\background.jpg" />
+    <Content Include="User\image\bb.jpg" />
+    <Content Include="User\image\br-1.png" />
+    <Content Include="User\image\br-2.png" />
+    <Content Include="User\image\br-3.png" />
+    <Content Include="User\image\br-4.png" />
+    <Content Include="User\image\br-5.png" />
+    <Content Include="User\image\Capture.JPG" />
+    <Content Include="User\image\Capture1.JPG" />
+    <Content Include="User\image\CL-1.jpg" />
+    <Content Include="User\image\CL-10.jpg" />
+    <Content Include="User\image\CL-11.jpg" />
+    <Content Include="User\image\CL-12.jpg" />
+    <Content Include="User\image\CL-15.jpg" />
+    <Content Include="User\image\CL-16.jpg" />
+    <Content Include="User\image\CL-17.jpg" />
+    <Content Include="User\image\CL-20.jpg" />
+    <Content Include="User\image\CL-3.jpg" />
+    <Content Include="User\image\CL-4.jpg" />
+    <Content Include="User\image\CL-6.jpg" />
+    <Content Include="User\image\CL-7.jpg" />
+    <Content Include="User\image\CL-9.jpg" />
+    <Content Include="User\image\CU-10.jpg" />
+    <Content Include="User\image\CU-11.jpg" />
+    <Content Include="User\image\CU-12.jpg" />
+    <Content Include="User\image\CU-13.jpg" />
+    <Content Include="User\image\CU-14.jpg" />
+    <Content Include="User\image\CU-19.jpg" />
+    <Content Include="User\image\CU-2.jpg" />
+    <Content Include="User\image\CU-21.jpg" />
+    <Content Include="User\image\CU-5.jpg" />
+    <Content Include="User\image\CU-6.jpg" />
+    <Content Include="User\image\CU-8.jpg" />
+    <Content Include="User\image\CU-9.jpg" />
+    <Content Include="User\image\free.svg" />
+    <Content Include="User\image\G-13.jpg" />
+    <Content Include="User\image\G-16.jpg" />
+    <Content Include="User\image\G-17.jpg" />
+    <Content Include="User\image\G-18.jpg" />
+    <Content Include="User\image\G-2.jpg" />
+    <Content Include="User\image\G-3.jpg" />
+    <Content Include="User\image\G-5.jpg" />
+    <Content Include="User\image\G-6.jpg" />
+    <Content Include="User\image\G-7.jpg" />
+    <Content Include="User\image\G-8.jpg" />
+    <Content Include="User\image\G-9.jpg" />
+    <Content Include="User\image\G.jpg" />
+    <Content Include="User\image\gam.png" />
+    <Content Include="User\image\h.png" />
+    <Content Include="User\image\home.jpg" />
+    <Content Include="User\image\homee.jpg" />
+    <Content Include="User\image\image1.png" />
+    <Content Include="User\image\imgp2.jpg" />
+    <Content Include="User\image\kk.jpg" />
+    <Content Include="User\image\Laptop.png" />
+    <Content Include="User\image\logo.png" />
+    <Content Include="User\image\man2.png" />
+    <Content Include="User\image\mc.png" />
+    <Content Include="User\image\mm.jpg" />
+    <Content Include="User\image\mm1.jpg" />
+    <Content Include="User\image\mus.png" />
+    <Content Include="User\image\news-1.png" />
+    <Content Include="User\image\news-2.png" />
+    <Content Include="User\image\news-3.png" />
+    <Content Include="User\image\news.jpg" />
+    <Content Include="User\image\p-1.png" />
+    <Content Include="User\image\p-5.jpg" />
+    <Content Include="User\image\p-7.jpg" />
+    <Content Include="User\image\p10.png" />
+    <Content Include="User\image\p11.png" />
+    <Content Include="User\image\p12.png" />
+    <Content Include="User\image\p6.png" />
+    <Content Include="User\image\p8.png" />
+    <Content Include="User\image\p9.jpg" />
+    <Content Include="User\image\pay.png" />
+    <Content Include="User\image\pay.svg" />
+    <Content Include="User\image\PE-10.jpg" />
+    <Content Include="User\image\PE-11.jpg" />
+    <Content Include="User\image\PE-13.jpg" />
+    <Content Include="User\image\PE-17.jpg" />
+    <Content Include="User\image\PE-18.jpg" />
+    <Content Include="User\image\PE-19.jpg" />
+    <Content Include="User\image\PE-3.jpg" />
+    <Content Include="User\image\PE-4.jpg" />
+    <Content Include="User\image\PE-5.jpg" />
+    <Content Include="User\image\PE-6.jpg" />
+    <Content Include="User\image\PE-7.jpg" />
+    <Content Include="User\image\PE-8.jpg" />
+    <Content Include="User\image\PE-9.jpg" />
+    <Content Include="User\image\play.jpg" />
+    <Content Include="User\image\pngegg.png" />
+    <Content Include="User\image\pngegg1.png" />
+    <Content Include="User\image\PO-1.jpg" />
+    <Content Include="User\image\PO-10.jpg" />
+    <Content Include="User\image\PO-12.jpg" />
+    <Content Include="User\image\PO-13.jpg" />
+    <Content Include="User\image\PO-15.jpg" />
+    <Content Include="User\image\PO-16.jpg" />
+    <Content Include="User\image\PO-17.jpg" />
+    <Content Include="User\image\PO-18.jpg" />
+    <Content Include="User\image\PO-19.jpg" />
+    <Content Include="User\image\PO-2.jpg" />
+    <Content Include="User\image\PO-22.jpg" />
+    <Content Include="User\image\PO-3.jpg" />
+    <Content Include="User\image\PO-4.jpg" />
+    <Content Include="User\image\PO-7.jpg" />
+    <Content Include="User\image\PO-8.jpg" />
+    <Content Include="User\image\PO-9.jpg" />
+    <Content Include="User\image\pp.png" />
+    <Content Include="User\image\product-img.jpg" />
+    <Content Include="User\image\S-11.jpg" />
+    <Content Include="User\image\S-15.jpg" />
+    <Content Include="User\image\S-17.jpg" />
+    <Content Include="User\image\S-18.jpg" />
+    <Content Include="User\image\S-2.jpg" />
+    <Content Include="User\image\S-20.jpg" />
+    <Content Include="User\image\S-22.jpg" />
+    <Content Include="User\image\S-23.jpg" />
+    <Content Include="User\image\s-25.jpg" />
+    <Content Include="User\image\S-3.jpg" />
+    <Content Include="User\image\S-4.jpg" />
+    <Content Include="User\image\S-8.jpg" />
+    <Content Include="User\image\sett.svg" />
+    <Content Include="User\image\sup-1.svg" />
+    <Content Include="User\image\sup-2.svg" />
+    <Content Include="User\image\sup-3.svg" />
+    <Content Include="User\image\supt.svg" />
+    <Content Include="User\image\tattoooimg.png" />
+    <Content Include="User\image\tattoooimg2.png" />
+    <Content Include="User\image\trend1.jpg" />
+    <Content Include="User\image\trend2.jpg" />
+    <Content Include="User\image\trend3.jpg" />
+    <Content Include="User\image\vi.png" />
+    <Content Include="User\image\w.png" />
+    <Content Include="User\payment.aspx" />
+    <Content Include="User\PlaceOrder.aspx" />
+    <Content Include="User\View_cart.aspx" />
+    <Content Include="User\View_design.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_home.aspx.cs">
+      <DependentUpon>Admin_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_home.aspx.designer.cs">
+      <DependentUpon>Admin_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Delete_user.aspx.cs">
+      <DependentUpon>Delete_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Delete_user.aspx.designer.cs">
+      <DependentUpon>Delete_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage_staff.aspx.cs">
+      <DependentUpon>manage_staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage_staff.aspx.designer.cs">
+      <DependentUpon>manage_staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Update_user.aspx.cs">
+      <DependentUpon>Update_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Update_user.aspx.designer.cs">
+      <DependentUpon>Update_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\View_review.aspx.cs">
+      <DependentUpon>View_review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\View_review.aspx.designer.cs">
+      <DependentUpon>View_review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Change_password.aspx.cs">
+      <DependentUpon>Change_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Change_password.aspx.designer.cs">
+      <DependentUpon>Change_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignIn1.aspx.cs">
+      <DependentUpon>SignIn1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignIn1.aspx.designer.cs">
+      <DependentUpon>SignIn1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp1.aspx.cs">
+      <DependentUpon>SignUp1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp1.aspx.designer.cs">
+      <DependentUpon>SignUp1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Add_Design.aspx.cs">
+      <DependentUpon>Add_Design.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Add_Design.aspx.designer.cs">
+      <DependentUpon>Add_Design.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Delete_appointment.aspx.cs">
+      <DependentUpon>Delete_appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Delete_appointment.aspx.designer.cs">
+      <DependentUpon>Delete_appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Delete_review.aspx.cs">
+      <DependentUpon>Delete_review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Delete_review.aspx.designer.cs">
+      <DependentUpon>Delete_review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Staff.Master.cs">
+      <DependentUpon>Staff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Staff.Master.designer.cs">
+      <DependentUpon>Staff.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Staff_home.aspx.cs">
+      <DependentUpon>Staff_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Staff_home.aspx.designer.cs">
+      <DependentUpon>Staff_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\View_appointment.aspx.cs">
+      <DependentUpon>View_appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\View_appointment.aspx.designer.cs">
+      <DependentUpon>View_appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\View_review.aspx.cs">
+      <DependentUpon>View_review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\View_review.aspx.designer.cs">
+      <DependentUpon>View_review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Add_Appointment.aspx.cs">
+      <DependentUpon>Add_Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Add_Appointment.aspx.designer.cs">
+      <DependentUpon>Add_Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Add_review.aspx.cs">
+      <DependentUpon>Add_review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Add_review.aspx.designer.cs">
+      <DependentUpon>Add_review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Add_To_Cart.aspx.cs">
+      <DependentUpon>Add_To_Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Add_To_Cart.aspx.designer.cs">
+      <DependentUpon>Add_To_Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Artists.aspx.cs">
+      <DependentUpon>Artists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Artists.aspx.designer.cs">
+      <DependentUpon>Artists.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Blog.aspx.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Blog.aspx.designer.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Delete_cart.aspx.cs">
+      <DependentUpon>Delete_cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Delete_cart.aspx.designer.cs">
+      <DependentUpon>Delete_cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\PlaceOrder.aspx.cs">
+      <DependentUpon>PlaceOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\PlaceOrder.aspx.designer.cs">
+      <DependentUpon>PlaceOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User1.Master.cs">
+      <DependentUpon>User1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User1.Master.designer.cs">
+      <DependentUpon>User1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\View_cart.aspx.cs">
+      <DependentUpon>View_cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\View_cart.aspx.designer.cs">
+      <DependentUpon>View_cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\View_design.aspx.cs">
+      <DependentUpon>View_design.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\View_design.aspx.designer.cs">
+      <DependentUpon>View_design.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\assets\fonts\FontAwesome.otf" />
+    <Content Include="Admin\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Admin\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Admin\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Admin\assets\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Admin\Admin.Master" />
+    <None Include="packages.config" />
+    <Content Include="Staff\Staff.Master" />
+    <Content Include="User\User1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53769</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44326/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

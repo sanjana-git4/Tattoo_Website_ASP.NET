@@ -1,0 +1,53 @@
+/*------------About Css----------*/
+
+.about_section{
+    width: 90vw;
+    margin-inline: auto;
+    margin-block: 4rem;
+    grid-template-areas: 
+    'one'
+    'two';
+}
+
+.about_section:nth-child(1){
+    grid-area: one;
+}
+
+.about_section:nth-child(2){
+    grid-area: two;
+}
+
+.about_section > * img{
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about_info{
+    padding-inline: 0.5rem;
+}
+
+.about_info p{
+    line-height: 1.8rem;
+}
+
+/* ----------------Media Queries-----------*/
+
+@media (min-width: 60em){
+    .about_section{
+        grid-auto-columns: 1fr;
+        align-items: center;
+        --grid-gap: 3rem;
+        grid-template-areas: 
+        'two one';
+    }
+
+    .about_info{
+        display: grid;
+        place-content: center;
+    }
+
+    .about_info > h3{
+        font-size: 2rem;
+        
+    }
+}

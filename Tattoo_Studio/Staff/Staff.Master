@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Staff.master.cs" Inherits="Tattoo_Studio.Staff.Staff" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initaial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+              <nav>
+		<div class="logo">
+			<p>inkstar</p>
+		</div>
+		<ul>
+			<li><a href="Staff_home.aspx" class="active">home</a></li>
+			<li><a href="Add_Design.aspx">Add Designs</a></li>
+			<li><a href="View_appointment.aspx">Appointments</a></li>
+			<li><a href="View_review.aspx">Reviews</a></li>
+			<li><a href="../Logout.aspx">Log Out</a></li>
+		</ul>
+
+	</nav>
+	<br />
+     <br />
+     <br />
+			<div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+				</div>
+        </div>
+    </form>
+</body>
+</html>
